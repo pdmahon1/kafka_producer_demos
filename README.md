@@ -1,0 +1,1 @@
+These files represent the work I did in the Kafka tutorial. They do not match USAA standards completely, but they provide insight on how to go about writing a Producer and Consumer. The Twitter-related file with be the most in-depth. The variations of the Producer*.java files are similar to each other but have minor differences that add funcationality. It's worth checking out :)
