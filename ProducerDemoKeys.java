@@ -27,15 +27,15 @@ public class ProducerDemoKeys {
         //step 3: send data
         producer.send(record, new Callback() {
             public void onCompletion(RecordMetadata recordMetadata, Exception e) {
-                if(e == null){
-                    //record successfully sent, log it
-                }
-                else{
-                    //deal with the error
+                if(e != null){
                     logger.error("error while producing", e);
+                    return;
                 }
+                
+                //at this point, the record was successfully sent. Do something with recordMetaData or log it
             }
         });
+        
         producer.flush();
         producer.close();
     }
